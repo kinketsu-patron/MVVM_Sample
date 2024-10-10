@@ -22,22 +22,28 @@
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Center"
                     Orientation="Horizontal">
-            <TextBox Width="30"
+            <TextBox Text="{ Binding LeftParam }"
+                     Width="30"
                      VerticalContentAlignment="Center"
                      HorizontalContentAlignment="Center" />
             <Label Content="+"
                    FontSize="24"
                    VerticalContentAlignment="Center" />
-            <TextBox Width="30"
+            <TextBox Text="{ Binding RightParam }"
+                     Width="30"
                      VerticalContentAlignment="Center"
                      HorizontalContentAlignment="Center" />
             <Label Width="10" />
             <Button Content="="
+                    Command="{ Binding EqualCommand }"
                     FontSize="24"
                     Width="40" />
             <Label Width="10" />
-            <TextBox Width="80"
-                     IsEnabled="False" />
+            <TextBox Text="{ Binding Result, UpdateSourceTrigger=PropertyChanged}"
+                     Width="80"
+                     IsEnabled="False"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center" />
         </StackPanel>
     </Grid>
 </Window>
