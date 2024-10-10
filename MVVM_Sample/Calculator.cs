@@ -2,50 +2,50 @@
 {
     public class Calculator : NotifyChanged
     {
-        private uint _LeftParam;
+        private uint m_LeftParam;
         public uint LeftParam
         {
             get
             {
-                return _LeftParam;
+                return m_LeftParam;
             }
             set
             {
-                if ( _LeftParam != value )
+                if ( m_LeftParam != value )
                 {
-                    _LeftParam = value;
+                    m_LeftParam = value;
                 }
             }
         }
 
-        private uint _RightParam;
+        private uint m_RightParam;
         public uint RightParam
         {
             get
             {
-                return _RightParam;
+                return m_RightParam;
             }
             set
             {
-                if ( _RightParam != value )
+                if ( m_RightParam != value )
                 {
-                    _RightParam = value;
+                    m_RightParam = value;
                 }
             }
         }
 
-        private uint _Result;
+        private uint m_Result;
         public uint Result
         {
             get
             {
-                return _Result;
+                return m_Result;
             }
             set
             {
-                if ( _Result != value )
+                if ( m_Result != value )
                 {
-                    _Result = value;
+                    m_Result = value;
                     RaisePropertyChanged( );
                 }
             }
