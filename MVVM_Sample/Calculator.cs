@@ -1,38 +1,9 @@
 ﻿namespace MVVM_Sample
 {
-    public class Calculator : NotifyChanged
+    public class Calculator : BindableBase
     {
-        private uint m_LeftParam;
-        public uint LeftParam
-        {
-            get
-            {
-                return m_LeftParam;
-            }
-            set
-            {
-                if ( m_LeftParam != value )
-                {
-                    m_LeftParam = value;
-                }
-            }
-        }
-
-        private uint m_RightParam;
-        public uint RightParam
-        {
-            get
-            {
-                return m_RightParam;
-            }
-            set
-            {
-                if ( m_RightParam != value )
-                {
-                    m_RightParam = value;
-                }
-            }
-        }
+        public uint LeftParam { get; set; }
+        public uint RightParam { get; set; }
 
         private uint m_Result;
         public uint Result
@@ -43,11 +14,7 @@
             }
             set
             {
-                if ( m_Result != value )
-                {
-                    m_Result = value;
-                    RaisePropertyChanged( );
-                }
+                SetProperty( ref m_Result, value );
             }
         }
 

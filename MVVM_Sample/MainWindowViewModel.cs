@@ -2,7 +2,7 @@
 
 namespace MVVM_Sample
 {
-    public class MainWindowViewModel : NotifyChanged
+    public class MainWindowViewModel : BindableBase
     {
         private Calculator m_CalcModel;
         public DelegateCommand EqualCommand { get; }
